@@ -62,22 +62,22 @@ d3.json(JSONurl, function(data) {
       .style("fill", function(d) {
         return d.data.color})
 
-      svg
-        .selectAll("rect")
-        .data(root.leaves())
-        .on("mouseover", function(d) {
-            d3.selectAll('rect').style("opacity",0.5)
-            d3.select(this).style("opacity",1)
-            d3.select(this).style("stroke-width",3)
-            selectedEmotion = d.data.name 
-            selectedColor = d.data.color
-        })
-        .on("mouseout", function(d) {
-          d3.selectAll('rect').style("opacity",1)
-          d3.selectAll('rect').style("stroke-width",1)
-          selectedEmotion = 0; 
-      })
-  
+  svg
+    .selectAll("rect")
+    .data(root.leaves())
+    .on("mouseover", function(d) {
+        d3.selectAll('rect').style("opacity",0.5)
+        d3.select(this).style("opacity",1)
+        d3.select(this).style("stroke-width",3)
+        selectedEmotion = d.data.name 
+        selectedColor = d.data.color
+    })
+    .on("mouseout", function(d) {
+      d3.selectAll('rect').style("opacity",1)
+      d3.selectAll('rect').style("stroke-width",1)
+      selectedEmotion = 0; 
+  })
+
   var texts = svg.selectAll("text")
                 .data(root.leaves())
                 .enter()
