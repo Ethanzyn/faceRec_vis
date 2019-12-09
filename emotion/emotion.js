@@ -16,6 +16,11 @@ var margin = {top: 0, right: 0, bottom: 0, left: 0},
 // read json data
 var JSONurl
 
+function preload(){
+  getMask("1001")
+
+}
+
 // intial JSON data 
 if(JSONurl == undefined){
   JSONurl = "../emotion_predictions/1001.json"
@@ -156,11 +161,6 @@ function createExample(){
 }
 
 // initial function of the p5 sketch 
-function preload(){
-  getMask("1001")
-  
-  
-}
 
 function setup (){
   var canvas = createCanvas(450, 450);
