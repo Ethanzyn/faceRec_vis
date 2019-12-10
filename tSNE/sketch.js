@@ -128,7 +128,7 @@ function draw() {
 	closestDistance = 10000
 	winner = []
 	push();
-	// scaleFactor = scaleSlider.value()
+	scaleFactor = 1
 	// scale(scaleFactor)
 
 	for (let i = 0; i < tSNEimages.length; i++){
